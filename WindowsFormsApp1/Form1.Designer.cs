@@ -20,28 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 346);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
-        }
-
-        #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtDesignation;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.RadioButton rBtnFemale;
+        private System.Windows.Forms.RadioButton rBtnMale;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label displayLbl;
     }
 }
 
