@@ -31,6 +31,10 @@
         private System.Windows.Forms.RadioButton rBtnMale;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label displayLbl;
+        private System.Windows.Forms.CheckBox cBoxGood;
+        private System.Windows.Forms.CheckBox cBoxVeryGood;
+        private System.Windows.Forms.Label reviewLbl;
+        private System.Windows.Forms.DataGridView dtDataGridView;
     }
 }
 

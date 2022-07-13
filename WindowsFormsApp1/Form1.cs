@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        DataTable dt = new DataTable();
+        string name;
+        string designation;
+        int salary;
+        string gender;
+        string review;
+
         public Form1()
         {
             InitializeComponent();
@@ -12,25 +21,61 @@ namespace WindowsFormsApp1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            string designation = txtDesignation.Text;
-            int salary = int.Parse(txtSalary.Text);
-            string gender;
+            name = txtName.Text;
+            designation = txtDesignation.Text;
+            salary = int.Parse(txtSalary.Text);
+            
 
+            // Gender
             if (rBtnFemale.Checked)
             {
-                gender = "Female";
+                gender = rBtnFemale.Text;
             }
             else if (rBtnMale.Checked)
             {
-                gender = "Male";
+                gender = rBtnMale.Text;
             }
             else
             {
-                gender = "Undefined";
+                gender = "Not Specified";
             }
 
-            displayLbl.Text = $"Name: {name}\nDesignation: {designation}\nSalary: {salary}\nGender: {gender}";            
+            // Review
+            if (cBoxGood.Checked)
+            {
+                review = cBoxGood.Text;
+            }
+            else if (cBoxVeryGood.Checked)
+            {
+                review = cBoxVeryGood.Text;
+            }
+            else
+            {
+                review = "Not Specified";
+            }
+
+            display();
+            //displayLbl.Text = $"Name: {name}\nDesignation: {designation}\nSalary: {salary}\nGender: {gender}\nReview: {review}";            
+
+        }
+
+        public void display()
+        {
+            dt.Columns.Add(" Name ");
+            dt.Columns.Add(" Designation ");
+            dt.Columns.Add(" Salary ");
+            dt.Columns.Add(" Gender ");
+            dt.Columns.Add(" Review ");
+
+            DataRow dr = dt.NewRow();
+            dr[0] = name;
+            dr[1] = designation;
+            dr[2] = salary;
+            dr[3] = gender;
+            dr[4] = review;
+
+            dt.Rows.Add(dr);
+            dtDataGridView.DataSource = dt;
         }
 
         private void InitializeComponent()
@@ -46,6 +91,11 @@ namespace WindowsFormsApp1
             this.rBtnMale = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.displayLbl = new System.Windows.Forms.Label();
+            this.cBoxGood = new System.Windows.Forms.CheckBox();
+            this.cBoxVeryGood = new System.Windows.Forms.CheckBox();
+            this.reviewLbl = new System.Windows.Forms.Label();
+            this.dtDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +149,7 @@ namespace WindowsFormsApp1
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(198, 222);
+            this.btnSave.Location = new System.Drawing.Point(363, 73);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
@@ -141,17 +191,58 @@ namespace WindowsFormsApp1
             // displayLbl
             // 
             this.displayLbl.AutoSize = true;
-            this.displayLbl.Location = new System.Drawing.Point(83, 276);
+            this.displayLbl.Location = new System.Drawing.Point(83, 317);
             this.displayLbl.Name = "displayLbl";
-            this.displayLbl.Size = new System.Drawing.Size(35, 13);
+            this.displayLbl.Size = new System.Drawing.Size(0, 13);
             this.displayLbl.TabIndex = 10;
-            this.displayLbl.Text = "label5";
             this.displayLbl.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // cBoxGood
+            // 
+            this.cBoxGood.AutoSize = true;
+            this.cBoxGood.Location = new System.Drawing.Point(198, 226);
+            this.cBoxGood.Name = "cBoxGood";
+            this.cBoxGood.Size = new System.Drawing.Size(52, 17);
+            this.cBoxGood.TabIndex = 11;
+            this.cBoxGood.Text = "Good";
+            this.cBoxGood.UseVisualStyleBackColor = true;
+            // 
+            // cBoxVeryGood
+            // 
+            this.cBoxVeryGood.AutoSize = true;
+            this.cBoxVeryGood.Location = new System.Drawing.Point(284, 226);
+            this.cBoxVeryGood.Name = "cBoxVeryGood";
+            this.cBoxVeryGood.Size = new System.Drawing.Size(76, 17);
+            this.cBoxVeryGood.TabIndex = 12;
+            this.cBoxVeryGood.Text = "Very Good";
+            this.cBoxVeryGood.UseVisualStyleBackColor = true;
+            // 
+            // reviewLbl
+            // 
+            this.reviewLbl.AutoSize = true;
+            this.reviewLbl.Location = new System.Drawing.Point(86, 226);
+            this.reviewLbl.Name = "reviewLbl";
+            this.reviewLbl.Size = new System.Drawing.Size(46, 13);
+            this.reviewLbl.TabIndex = 13;
+            this.reviewLbl.Text = "Review:";
+            // 
+            // dtDataGridView
+            // 
+            this.dtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDataGridView.Location = new System.Drawing.Point(89, 266);
+            this.dtDataGridView.Name = "dtDataGridView";
+            this.dtDataGridView.Size = new System.Drawing.Size(349, 150);
+            this.dtDataGridView.TabIndex = 14;
+            this.dtDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDataGridView_CellContentClick);
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(505, 520);
+            this.ClientSize = new System.Drawing.Size(979, 520);
+            this.Controls.Add(this.dtDataGridView);
+            this.Controls.Add(this.reviewLbl);
+            this.Controls.Add(this.cBoxVeryGood);
+            this.Controls.Add(this.cBoxGood);
             this.Controls.Add(this.displayLbl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rBtnMale);
@@ -165,6 +256,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +276,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        
     }
 }
