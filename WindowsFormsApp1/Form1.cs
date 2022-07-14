@@ -55,6 +55,7 @@ namespace WindowsFormsApp1
             }
 
             display();
+            empty();
             //displayLbl.Text = $"Name: {name}\nDesignation: {designation}\nSalary: {salary}\nGender: {gender}\nReview: {review}";            
 
         }
@@ -78,6 +79,15 @@ namespace WindowsFormsApp1
             dtDataGridView.DataSource = dt;
         }
 
+        public void empty()
+        {
+            txtName.Text = "";
+            txtDesignation.Text = "";
+            txtSalary.Text = "";
+            rBtnFemale.Checked = false;
+            rBtnMale.Checked = false;
+        }
+
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
@@ -95,6 +105,8 @@ namespace WindowsFormsApp1
             this.cBoxVeryGood = new System.Windows.Forms.CheckBox();
             this.reviewLbl = new System.Windows.Forms.Label();
             this.dtDataGridView = new System.Windows.Forms.DataGridView();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,16 +241,35 @@ namespace WindowsFormsApp1
             // dtDataGridView
             // 
             this.dtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtDataGridView.Location = new System.Drawing.Point(89, 266);
+            this.dtDataGridView.Location = new System.Drawing.Point(86, 300);
             this.dtDataGridView.Name = "dtDataGridView";
             this.dtDataGridView.Size = new System.Drawing.Size(349, 150);
             this.dtDataGridView.TabIndex = 14;
-            this.dtDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDataGridView_CellContentClick);
+            // 
+            // comboBoxCourse
+            // 
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(198, 262);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCourse.TabIndex = 15;
+            this.comboBoxCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(87, 265);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Course:";
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(979, 520);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBoxCourse);
             this.Controls.Add(this.dtDataGridView);
             this.Controls.Add(this.reviewLbl);
             this.Controls.Add(this.cBoxVeryGood);
@@ -256,6 +287,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,6 +309,18 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBoxCourse.Items.Add("C# Programming");
+            comboBoxCourse.Items.Add("C++ Programming");
+            comboBoxCourse.Items.Add("Java Programming");
+            comboBoxCourse.Items.Add("PHP Programming");
+        }
+
+        private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string courseName = comboBoxCourse.SelectedItem.ToString();
+            MessageBox.Show(courseName);
+        }
     }
 }

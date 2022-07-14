@@ -35,6 +35,8 @@
         private System.Windows.Forms.CheckBox cBoxVeryGood;
         private System.Windows.Forms.Label reviewLbl;
         private System.Windows.Forms.DataGridView dtDataGridView;
+        private System.Windows.Forms.ComboBox comboBoxCourse;
+        private System.Windows.Forms.Label label5;
     }
 }
 
