@@ -90,7 +90,7 @@
             this.txtAddress.Location = new System.Drawing.Point(94, 162);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(451, 20);
-            this.txtAddress.TabIndex = 16;
+            this.txtAddress.TabIndex = 7;
             // 
             // label7
             // 
@@ -108,7 +108,7 @@
             this.radioMale.Location = new System.Drawing.Point(460, 123);
             this.radioMale.Name = "radioMale";
             this.radioMale.Size = new System.Drawing.Size(48, 17);
-            this.radioMale.TabIndex = 14;
+            this.radioMale.TabIndex = 6;
             this.radioMale.TabStop = true;
             this.radioMale.Text = "Male";
             this.radioMale.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.txtID.Location = new System.Drawing.Point(92, 120);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(168, 20);
-            this.txtID.TabIndex = 12;
+            this.txtID.TabIndex = 4;
             // 
             // label6
             // 
@@ -145,7 +145,7 @@
             this.txtEmail.Location = new System.Drawing.Point(377, 77);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(168, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 3;
             // 
             // label3
             // 
@@ -162,7 +162,7 @@
             this.txtDesignation.Location = new System.Drawing.Point(92, 77);
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(168, 20);
-            this.txtDesignation.TabIndex = 8;
+            this.txtDesignation.TabIndex = 2;
             // 
             // label4
             // 
@@ -179,7 +179,7 @@
             this.txtLastName.Location = new System.Drawing.Point(377, 36);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(168, 20);
-            this.txtLastName.TabIndex = 6;
+            this.txtLastName.TabIndex = 1;
             // 
             // label2
             // 
@@ -196,7 +196,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(94, 33);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(168, 20);
-            this.txtFirstName.TabIndex = 4;
+            this.txtFirstName.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -213,7 +213,7 @@
             this.radioFemale.Location = new System.Drawing.Point(377, 123);
             this.radioFemale.Name = "radioFemale";
             this.radioFemale.Size = new System.Drawing.Size(59, 17);
-            this.radioFemale.TabIndex = 2;
+            this.radioFemale.TabIndex = 5;
             this.radioFemale.TabStop = true;
             this.radioFemale.Text = "Female";
             this.radioFemale.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             this.button1.Location = new System.Drawing.Point(19, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 40);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -263,7 +263,7 @@
             this.button3.Location = new System.Drawing.Point(19, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 40);
-            this.button3.TabIndex = 3;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -276,7 +276,7 @@
             this.button2.Location = new System.Drawing.Point(19, 114);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 40);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -296,7 +296,7 @@
             this.button4.Location = new System.Drawing.Point(19, 237);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 40);
-            this.button4.TabIndex = 4;
+            this.button4.TabIndex = 3;
             this.button4.Text = "Export in Excel";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -316,7 +316,7 @@
             this.txtSearch.Location = new System.Drawing.Point(166, 208);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(379, 20);
-            this.txtSearch.TabIndex = 18;
+            this.txtSearch.TabIndex = 8;
             this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // RegistrationForm
