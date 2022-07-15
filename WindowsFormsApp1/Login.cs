@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-SE4TH6C3\\SQLEXPRESS;Initial Catalog=registration;Integrated Security=True;");
+        readonly SqlConnection con = new SqlConnection("Data Source=LAPTOP-SE4TH6C3\\SQLEXPRESS;Initial Catalog=registration;Integrated Security=True;");
         
         // Constructor
         public Login()
@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
                 else
                 {
                     SqlCommand cmd = new SqlCommand("SELECT * FROM LoginUsers WHERE U_Name=@Name and U_Pass=@Pass", con);
-                    cmd.Parameters.Add("@Name", txtUsername.Text);
-                    cmd.Parameters.Add("@Pass", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@Name", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@Pass", txtPassword.Text);
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adpt.Fill(ds);
