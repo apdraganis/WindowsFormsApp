@@ -15,8 +15,8 @@ namespace WindowsFormsApp1
     public partial class RegistrationForm : Form
     {
         // String Connection
-        string path = @"Data Source=LAPTOP-SE4TH6C3\SQLEXPRESS;Initial Catalog=registration;Integrated Security=True";
-        SqlConnection con;
+        readonly string path = @"Data Source=LAPTOP-SE4TH6C3\SQLEXPRESS;Initial Catalog=registration;Integrated Security=True";
+        readonly SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter adpt;
         System.Data.DataTable dt;
@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             con = new SqlConnection(path);
-            display();
+            Display();
             button2.Enabled = false;
             button3.Enabled = false;
         }
@@ -60,8 +60,8 @@ namespace WindowsFormsApp1
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Data saved in database!");
-                    clear();
-                    display();
+                    Clear();
+                    Display();
                 }
                 catch (Exception ex)
                 {
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
 
         }
 
-        public void clear()
+        public void Clear()
         {
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             txtAddress.Text = "";
         }
 
-        public void display()
+        public void Display()
         {
             try
             {
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Data has been updated!");
-                display();
+                Display();
             }
             catch (Exception ex)
             {
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Record has been deleted!");
-                display();
+                Display();
             }
             catch (Exception ex)
             {

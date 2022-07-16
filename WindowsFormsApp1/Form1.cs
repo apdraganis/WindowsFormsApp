@@ -14,17 +14,18 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void InitializeComponent()
         {
             this.displayLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.btnAddItems = new System.Windows.Forms.Button();
+            this.btnInvoice = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -32,15 +33,22 @@ namespace WindowsFormsApp1
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
+            // displayLbl
+            // 
+            this.displayLbl.Location = new System.Drawing.Point(0, 0);
+            this.displayLbl.Name = "displayLbl";
+            this.displayLbl.Size = new System.Drawing.Size(100, 23);
+            this.displayLbl.TabIndex = 18;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnShop);
+            this.panel1.Controls.Add(this.btnReports);
+            this.panel1.Controls.Add(this.btnProducts);
+            this.panel1.Controls.Add(this.btnAddItems);
+            this.panel1.Controls.Add(this.btnInvoice);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -50,65 +58,65 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(979, 97);
             this.panel1.TabIndex = 17;
             // 
-            // button6
+            // btnShop
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.Location = new System.Drawing.Point(847, 39);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 46);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Shop";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnShop.BackColor = System.Drawing.Color.White;
+            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnShop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnShop.Location = new System.Drawing.Point(847, 39);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(120, 46);
+            this.btnShop.TabIndex = 5;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnReports
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.Location = new System.Drawing.Point(682, 39);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 46);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Reports";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnReports.BackColor = System.Drawing.Color.White;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReports.Location = new System.Drawing.Point(682, 39);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(120, 46);
+            this.btnReports.TabIndex = 4;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnProducts
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.Location = new System.Drawing.Point(515, 39);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Products";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnProducts.BackColor = System.Drawing.Color.White;
+            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProducts.Location = new System.Drawing.Point(515, 39);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(120, 46);
+            this.btnProducts.TabIndex = 3;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnAddItems
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(346, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Add Items";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAddItems.BackColor = System.Drawing.Color.White;
+            this.btnAddItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnAddItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddItems.Location = new System.Drawing.Point(346, 39);
+            this.btnAddItems.Name = "btnAddItems";
+            this.btnAddItems.Size = new System.Drawing.Size(120, 46);
+            this.btnAddItems.TabIndex = 2;
+            this.btnAddItems.Text = "Add Items";
+            this.btnAddItems.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnInvoice
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(179, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Invoice";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnInvoice.BackColor = System.Drawing.Color.White;
+            this.btnInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnInvoice.Location = new System.Drawing.Point(179, 39);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Size = new System.Drawing.Size(120, 46);
+            this.btnInvoice.TabIndex = 1;
+            this.btnInvoice.Text = "Invoice";
+            this.btnInvoice.UseVisualStyleBackColor = false;
             // 
             // btnRegister
             // 
@@ -157,13 +165,11 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            //this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
