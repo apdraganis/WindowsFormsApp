@@ -218,5 +218,11 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void RegistrationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
     }
 }
