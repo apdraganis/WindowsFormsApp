@@ -5,27 +5,22 @@ using System.Linq;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class AdminForm : Form
     {
 
         DataTable dt = new DataTable();
 
         RegistrationForm rg = new RegistrationForm();
 
-        public Form1()
+        public AdminForm()
         {
             InitializeComponent();
-            DisableButtons();
         }
 
         private void InitializeComponent()
         {
             this.displayLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnShop = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
-            this.btnAddItems = new System.Windows.Forms.Button();
             this.btnInvoice = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,10 +40,6 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.Controls.Add(this.btnShop);
-            this.panel1.Controls.Add(this.btnReports);
-            this.panel1.Controls.Add(this.btnProducts);
-            this.panel1.Controls.Add(this.btnAddItems);
             this.panel1.Controls.Add(this.btnInvoice);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.menuStrip1);
@@ -59,64 +50,16 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(979, 97);
             this.panel1.TabIndex = 17;
             // 
-            // btnShop
-            // 
-            this.btnShop.BackColor = System.Drawing.Color.White;
-            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnShop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnShop.Location = new System.Drawing.Point(847, 39);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(120, 46);
-            this.btnShop.TabIndex = 5;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = false;
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.White;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReports.Location = new System.Drawing.Point(682, 39);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(120, 46);
-            this.btnReports.TabIndex = 4;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = false;
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.BackColor = System.Drawing.Color.White;
-            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnProducts.Location = new System.Drawing.Point(515, 39);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(120, 46);
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.Text = "Products";
-            this.btnProducts.UseVisualStyleBackColor = false;
-            // 
-            // btnAddItems
-            // 
-            this.btnAddItems.BackColor = System.Drawing.Color.White;
-            this.btnAddItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnAddItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddItems.Location = new System.Drawing.Point(346, 39);
-            this.btnAddItems.Name = "btnAddItems";
-            this.btnAddItems.Size = new System.Drawing.Size(120, 46);
-            this.btnAddItems.TabIndex = 2;
-            this.btnAddItems.Text = "Add Items";
-            this.btnAddItems.UseVisualStyleBackColor = false;
-            // 
             // btnInvoice
             // 
             this.btnInvoice.BackColor = System.Drawing.Color.White;
             this.btnInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.btnInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnInvoice.Location = new System.Drawing.Point(179, 39);
+            this.btnInvoice.Location = new System.Drawing.Point(144, 39);
             this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(120, 46);
+            this.btnInvoice.Size = new System.Drawing.Size(92, 46);
             this.btnInvoice.TabIndex = 1;
-            this.btnInvoice.Text = "Invoice";
+            this.btnInvoice.Text = "Library Books";
             this.btnInvoice.UseVisualStyleBackColor = false;
             // 
             // btnRegister
@@ -126,9 +69,9 @@ namespace WindowsFormsApp1
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRegister.Location = new System.Drawing.Point(12, 39);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(120, 46);
+            this.btnRegister.Size = new System.Drawing.Size(101, 46);
             this.btnRegister.TabIndex = 0;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "Library Customers";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -156,7 +99,7 @@ namespace WindowsFormsApp1
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // Form1
+            // AdminForm
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(979, 520);
@@ -164,7 +107,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.displayLbl);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -172,17 +115,6 @@ namespace WindowsFormsApp1
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
-        }
-
-        private void DisableButtons()
-        {
-            btnInvoice.Enabled = false;
-            btnAddItems.Enabled = false;
-            btnProducts.Enabled = false;
-            btnReports.Enabled = false;
-            btnShop.Enabled = false;
-
-            // Loop through all buttons?
         }
 
         private void button1_Click_1(object sender, EventArgs e)

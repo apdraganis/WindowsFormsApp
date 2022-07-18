@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                     if (count == 1)
                     {
                         MessageBox.Show("Login Successfull!");
-                        Form1 ob = new Form1();
+                        AdminForm ob = new AdminForm();
                         this.Hide();
                         ob.Show();
                     } 
