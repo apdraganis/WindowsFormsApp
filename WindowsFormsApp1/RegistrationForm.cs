@@ -28,11 +28,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
             con = new SqlConnection(path);
             Display();
-            button2.Enabled = false;
-            button3.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtFirstName.Text == "" || txtLastName.Text == "" || txtDesignation.Text == "" || txtEmail.Text == "" || txtID.Text == "" || txtAddress.Text == "")
             {
@@ -122,12 +122,12 @@ namespace WindowsFormsApp1
                 radioFemale.Checked = false;
             }
             txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            button2.Enabled = true;
-            button3.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BtnExport_Click(object sender, EventArgs e)
         {
 
             try
