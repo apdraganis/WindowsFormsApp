@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private void Authenticate()
+        private void Authenticate(int isAdmin)
         {
             try
             {
@@ -30,9 +30,11 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM LoginUsers WHERE U_Name=@Name and U_Pass=@Pass", con);
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM LoginUsers WHERE User_Name=@Name AND User_Pass=@Pass " +
+                        "AND isAdmin=@isAdmin", con);
                     cmd.Parameters.AddWithValue("@Name", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@Pass", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@isAdmin", isAdmin);
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adpt.Fill(ds);
@@ -57,25 +59,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLoginCustomer_Click(object sender, EventArgs e)
         {
-            Authenticate();
+            int isAdmin = 0;
+            Authenticate(isAdmin);
         }
 
-        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        private void BtnLoginAdmin_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                Authenticate();
-            }
-        }
-
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                Authenticate();
-            }
+            int isAdmin = 1;
+            Authenticate(isAdmin);
         }
     }
 }
