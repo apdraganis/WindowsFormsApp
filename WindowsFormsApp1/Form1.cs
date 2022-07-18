@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data;
+using System.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -14,7 +15,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-
+            DisableButtons();
         }
 
         private void InitializeComponent()
@@ -173,6 +174,17 @@ namespace WindowsFormsApp1
 
         }
 
+        private void DisableButtons()
+        {
+            btnInvoice.Enabled = false;
+            btnAddItems.Enabled = false;
+            btnProducts.Enabled = false;
+            btnReports.Enabled = false;
+            btnShop.Enabled = false;
+
+            // Loop through all buttons?
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             rg.Show();
@@ -184,5 +196,8 @@ namespace WindowsFormsApp1
             obj.Show();
             this.Hide();
         }
+
+        
+
     }
 }
