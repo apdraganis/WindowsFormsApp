@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.signInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signInAsCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signInAsAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -45,45 +43,32 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // signInToolStripMenuItem
             // 
-            this.signInToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.signInAsCustomerToolStripMenuItem,
-            this.signInAsAdminToolStripMenuItem});
+            this.signInToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.signInToolStripMenuItem.Name = "signInToolStripMenuItem";
-            this.signInToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.signInToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.signInToolStripMenuItem.Text = "Sign In";
-            // 
-            // signInAsCustomerToolStripMenuItem
-            // 
-            this.signInAsCustomerToolStripMenuItem.Name = "signInAsCustomerToolStripMenuItem";
-            this.signInAsCustomerToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.signInAsCustomerToolStripMenuItem.Text = "Sign in as customer";
-            // 
-            // signInAsAdminToolStripMenuItem
-            // 
-            this.signInAsAdminToolStripMenuItem.Name = "signInAsAdminToolStripMenuItem";
-            this.signInAsAdminToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.signInAsAdminToolStripMenuItem.Text = "Sign in as admin";
+            this.signInToolStripMenuItem.Click += new System.EventHandler(this.signInToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.library;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.library_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 120);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 426);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(578, 163);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -95,7 +80,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "HomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -109,8 +96,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signInAsCustomerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signInAsAdminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

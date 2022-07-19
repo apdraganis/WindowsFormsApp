@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void signInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

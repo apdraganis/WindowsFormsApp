@@ -70,5 +70,18 @@ namespace WindowsFormsApp1
             int isAdmin = 1;
             Authenticate(isAdmin);
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage homePage = new HomePage();
+            homePage.Show();
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            homePage.Show();
+        }
     }
 }
